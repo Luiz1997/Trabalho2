@@ -1,10 +1,21 @@
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class Trabalho2 {
 	
-public static void main(String args[]) {	
+public static void main(String args[]) {
+	
+		String arquivo = "C:\\Users\\home\\workspace\\Aplicação\\file.txt";
 		
+		try {
+			System.setIn(new FileInputStream(new File(arquivo)));
+		} catch (FileNotFoundException e) {
+			System.out.println("Arquivo não encrontrado");
+		}
+	
 		Scanner sc = new Scanner(System.in);
 		sc.useLocale(Locale.ENGLISH);
 		Locale.setDefault(new Locale("en", "US"));
@@ -52,11 +63,11 @@ public static void main(String args[]) {
 		for(l = 0 ; l < 3 ; l++){
             for(c = 0; c < 2 ; c++) {
             	if (c == 1) {
-                System.out.printf("Digite o preço adicional do tipo "+(l+1)+": ");
+                System.out.println("Digite o preço adicional do tipo "+(l+1)+": ");
                 mat[l][c] = sc.nextDouble();
             	}
             	else {
-            		System.out.printf("Digite o preço do tipo "+(l+1)+": ");
+            		System.out.println("Digite o preço do tipo "+(l+1)+": ");
                     mat[l][c] = sc.nextDouble();	
             	}
             }
@@ -147,4 +158,5 @@ public static void main(String args[]) {
 
 		sc.close();
 	}
+
 }
