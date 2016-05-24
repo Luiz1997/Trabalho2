@@ -83,7 +83,7 @@ public static void main(String args[]) {
 		}
 		
 		System.out.println("");
-		System.out.println("NOME  TELEFONE  TIPO  MINUTOS  TOTAL");
+		System.err.println("NOME  TELEFONE  TIPO  MINUTOS  TOTAL");
 		for (i=0; i<N; i++) {
 			System.out.print(vetnome[i]+": ");
 			System.out.print(vettel[i]+"  ");
