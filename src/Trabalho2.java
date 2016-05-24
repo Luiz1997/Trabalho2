@@ -8,7 +8,7 @@ public class Trabalho2 {
 	
 public static void main(String args[]) {
 	
-		String arquivo = "C:\\Users\\home\\workspace\\Aplicação\\file.txt";
+		String arquivo = "file.txt";
 		
 		try {
 			System.setIn(new FileInputStream(new File(arquivo)));
